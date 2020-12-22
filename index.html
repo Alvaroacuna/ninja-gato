@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Ninja Gato</title>
+</head>
+<body>
+
+    <img src="img\cat0.png" data-alt-src="img\ninja0.png">
+    <img src="img\cat1.png" data-alt-src="img\ninja1.png">
+    <img src="img\ninja2.png" data-alt-src="img\cat2.png">
+    <img src="img\ninja3.png" data-alt-src="img\cat3.png">
+    <img src="img\ninja4.png" data-alt-src="img\cat4.png">
+
+
+    <script>
+
+        $(document).ready(function() {
+
+            $('img').on('click', function() {
+
+                var src= $(this).attr('src');
+                var data= $(this).attr('data-alt-src');
+
+                $(this).attr('src', data);
+                $(this).attr('data-alt-src', src);
+
+            });
+
+        });
+
+
+
+    </script>
+    
+</body>
+</html>
